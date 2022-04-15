@@ -6,6 +6,7 @@
         "slide-0": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/designer-at-desk.jpg",
             "heading": "Image slide",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
@@ -23,6 +24,7 @@
         "slide-1": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/designer-at-desk.jpg",
             "heading": "Image slide",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
@@ -44,7 +46,7 @@
       ],
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "adapt_image",
+        "slide_height": "medium",
         "slider_visual": "counter",
         "auto_rotate": false,
         "change_slides_speed": 5,
