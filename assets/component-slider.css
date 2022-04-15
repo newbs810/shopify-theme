@@ -303,7 +303,8 @@ slider-component.slider-component-full-width {
   color: rgb(var(--color-foreground));
 }
 .collection .slider-buttons {
-    position: unset;
+  position: unset;
+  background-color: unset;
 }
 
 .slider-buttons {
