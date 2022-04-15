@@ -302,6 +302,9 @@ slider-component.slider-component-full-width {
   text-decoration: underline;
   color: rgb(var(--color-foreground));
 }
+.collection .slider-buttons {
+    position: unset;
+}
 
 .slider-buttons {
   display: flex;
