@@ -2870,6 +2870,9 @@ details-disclosure > details {
   font-weight: var(--font-body-weight-bold);
 }
 
-  .full-width {
-  	width:100%;
-  }
+.full-width {
+  width:100%;
+}
+.container{
+    max-width: 1400px;
+}
