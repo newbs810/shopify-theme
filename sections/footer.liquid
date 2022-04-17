@@ -37,6 +37,9 @@
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
   {%- if section.blocks.size > 0 or section.settings.newsletter_enable or section.settings.show_social -%}
+  	{%- if section.settings.image -%}
+      <div class="footer__background" style="background-image: url({{ section.settings.image_background | image_url}});"></div>
+    {%- endif -%}
     <div class="footer__content-top page-width">
       {%- if section.blocks.size > 0 -%}
         {%- liquid
@@ -226,26 +229,6 @@
         </div>
     </div>
   {%- endif -%}
-	<img
-        srcset="{%- if section.settings.image.width >= 375 -%}{{ section.settings.image_background | image_url: width: 375 }} 375w,{%- endif -%}
-          {%- if section.settings.image.width >= 550 -%}{{ section.settings.image_background | image_url: width: 550 }} 550w,{%- endif -%}
-          {%- if section.settings.image.width >= 750 -%}{{ section.settings.image_background | image_url: width: 750 }} 750w,{%- endif -%}
-          {%- if section.settings.image.width >= 1100 -%}{{ section.settings.image_background | image_url: width: 1100 }} 1100w,{%- endif -%}
-          {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image_background | image_url: width: 1500 }} 1500w,{%- endif -%}
-          {%- if section.settings.image.width >= 1780 -%}{{ section.settings.image_background | image_url: width: 1780 }} 1780w,{%- endif -%}
-          {%- if section.settings.image.width >= 2000 -%}{{ section.settings.image_background | image_url: width: 2000 }} 2000w,{%- endif -%}
-          {%- if section.settings.image.width >= 3000 -%}{{ section.settings.image_background | image_url: width: 3000 }} 3000w,{%- endif -%}
-          {%- if section.settings.image.width >= 3840 -%}{{ section.settings.image_background | image_url: width: 3840 }} 3840w,{%- endif -%}
-          {{ section.settings.image_background | image_url }} {{ section.settings.image_background.width }}w"
-        sizes="{% if section.settings.image_2 != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.image_2 != blank %}50vw{% else %}100vw{% endif %}"
-        src="{{ section.settings.image_background | image_url: width: 1500 }}"
-        loading="lazy"
-        alt="{{ section.settings.image_background.alt | escape }}"
-        width="{{ section.settings.image_background.width }}"
-        height="{{ section.settings.image_background.width | divided_by: section.settings.image_background.aspect_ratio }}"
-         class="footer__background"
-        {% if section.settings.image_2 != blank %}class="banner__media-image-half"{% endif %}
-      >
 <!--   <div class="footer__content-bottom">
     <div class="footer__content-bottom-wrapper page-width">
       <div class="footer__column footer__localization isolate">
