@@ -35,9 +35,9 @@
   }
 {%- endstyle -%}
 
-<footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding" {%- if section.settings.image_background != blank -%} style="background-image: url({{ section.settings.image_background | image_url}});" {%- endif -%}>
+<footer class="footer color-{{ section.settings.color_scheme }} gradient " {%- if section.settings.image_background != blank -%} style="background-image: url({{ section.settings.image_background | image_url}});" {%- endif -%}>
   {%- if section.blocks.size > 0 or section.settings.newsletter_enable or section.settings.show_social -%}
-  <div class="overlay"></div>
+  <div class="section-{{ section.id }}-padding">
     <div class="footer__content-top page-width">
       {%- if section.blocks.size > 0 -%}
         {%- liquid
@@ -226,6 +226,7 @@
           <small class="copyright__content">{{ powered_by_link }}</small>
         </div>
     </div>
+  </div>
   {%- endif -%}
 <!--   <div class="footer__content-bottom">
     <div class="footer__content-bottom-wrapper page-width">
