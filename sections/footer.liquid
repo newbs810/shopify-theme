@@ -226,6 +226,7 @@
         </div>
     </div>
   {%- endif -%}
+  {{ section.settings.image_background | image_url: width: 375 }}
 	<img
         srcset="{%- if section.settings.image.width >= 375 -%}{{ section.settings.image_background | image_url: width: 375 }} 375w,{%- endif -%}
           {%- if section.settings.image.width >= 550 -%}{{ section.settings.image_background | image_url: width: 550 }} 550w,{%- endif -%}
