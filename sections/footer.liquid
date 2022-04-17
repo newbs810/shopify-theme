@@ -35,11 +35,9 @@
   }
 {%- endstyle -%}
 
-<footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+<footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding" {%- if section.settings.image_background != blank -%} style="background-image: url({{ section.settings.image_background | image_url}});" {%- endif -%}>
   {%- if section.blocks.size > 0 or section.settings.newsletter_enable or section.settings.show_social -%}
-  	{%- if section.settings.image_background != blank -%}
-      <div class="footer__background" style="background-image: url({{ section.settings.image_background | image_url}});"></div>
-    {%- endif -%}
+    
     <div class="footer__content-top page-width">
       {%- if section.blocks.size > 0 -%}
         {%- liquid
