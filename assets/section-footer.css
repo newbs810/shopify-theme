@@ -14,7 +14,9 @@ footer.footer.color-background-1.gradient {
     background-position: top;
     background-size: cover;
 }
-
+.overlay {
+    background-color: rgba(255,255,255,0.5);
+}
 @media screen and (max-width: 749px) {
   .footer .grid {
     display: block;
