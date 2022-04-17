@@ -368,14 +368,14 @@ noscript .localization-selector.link {
 
 .footer__copyright {
   text-align: center;
-  margin-top: 1.5rem;
+  margin-top: 5.5rem;
 }
 
-@media screen and (min-width: 750px) {
+/* @media screen and (min-width: 750px) {
   .footer__copyright {
     text-align: right;
   }
-}
+} */
 
 @keyframes appear-down {
   0% {
