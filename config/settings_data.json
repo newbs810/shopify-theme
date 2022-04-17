@@ -113,7 +113,8 @@
           "announcement-bar-0"
         ],
         "settings": {
-          "background-color": "#5b3c3c"
+          "background-color": "#5b3c3c",
+          "text-color": "#ffffff"
         }
       },
       "header": {
