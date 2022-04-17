@@ -37,7 +37,7 @@
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient " {%- if section.settings.image_background != blank -%} style="background-image: url({{ section.settings.image_background | image_url}});" {%- endif -%}>
   {%- if section.blocks.size > 0 or section.settings.newsletter_enable or section.settings.show_social -%}
-  <div class="section-{{ section.id }}-padding">
+  <div class="section-{{ section.id }}-padding overlay">
     <div class="footer__content-top page-width">
       {%- if section.blocks.size > 0 -%}
         {%- liquid
