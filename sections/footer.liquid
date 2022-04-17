@@ -226,6 +226,7 @@
         </div>
     </div>
   {%- endif -%}
+  <div class="footer__background">
 	<img
         srcset="{%- if section.settings.image.width >= 375 -%}{{ section.settings.image_background | image_url: width: 375 }} 375w,{%- endif -%}
           {%- if section.settings.image.width >= 550 -%}{{ section.settings.image_background | image_url: width: 550 }} 550w,{%- endif -%}
@@ -245,6 +246,7 @@
         height="{{ section.settings.image_background.width | divided_by: section.settings.image_background.aspect_ratio }}"
         {% if section.settings.image_2 != blank %}class="banner__media-image-half"{% endif %}
       >
+   </div>
 <!--   <div class="footer__content-bottom">
     <div class="footer__content-bottom-wrapper page-width">
       <div class="footer__column footer__localization isolate">
